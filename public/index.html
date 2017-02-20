@@ -1,0 +1,92 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<!--<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    
+<!-- bootstrap -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>    
+
+<!-- date picker -->
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="https://resources/demos/style.css">    
+    
+<link rel="stylesheet" type="text/css" href="style/style.css" />
+<script src="../public/js/app.js" type="text/javascript"></script>
+
+<title>Exchange currency</title>
+    
+</head>
+
+<body>
+<div id="wrapper">
+    
+    
+    
+  	<h1>Exchange currency</h1>
+      
+  	<header></header>
+      
+<section>
+
+
+    <h3></h3>
+    <div class="divider"></div>
+    
+    <article> <!-- content -->
+    
+
+    
+    
+    </article>
+
+
+</section>
+      
+      
+<aside>
+
+    
+<div class="subHeader">
+    <a onclick="currencyToday()"><h3>Currency today</h3></a>
+</div>
+ 
+    
+    
+<div class="subHeader"><a id='dayToggle'><h3>Currency on day:</h3></a>
+</div>
+<div id='dayCurr' hidden="true">
+    <input type="text" id='datepicker' onchange='currencyOnDay()' placeholder="pick up date">
+</div>
+    
+    
+    
+    
+<div class="subHeader"><a id='calcToggle'><h3>Calculate:</h3></a></div>
+<div id='calcCurr' hidden="true">
+
+    <input type="number" id='amount' placeholder="enter amount" min='0' onchange='calculate()'>
+    <input type="text" id='datepicker2' placeholder="pick up date" onchange='calculate()'> <br>
+    <select id='selCurrency' onchange='calculate()'><option selected="selected">Pick currency (FROM)</option></select>
+    <select id='selCurrency2' onchange='calculate()'><option selected="selected">Pick currency (TO)</option></select>
+    <p id='result' class="well well-sm"></p>
+</div>
+    
+</aside>
+  
+</div><!-- wrapper -->
+
+    
+<footer>
+    Developed By MG
+</footer>
+    
+</body>
+</html>
