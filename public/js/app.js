@@ -1,4 +1,4 @@
-var today = "http://api.kursna-lista.info/3a829dd47e1cc21fb1dfe3406989a59a/kursna_lista/json";
+var today = "https://api.kursna-lista.info/3a829dd47e1cc21fb1dfe3406989a59a/kursna_lista/json";
 var countries = {
     eur: 'EU', usd: 'USA', chf: "Switzerland", gbp: "Great Britain", 
     aud: 'Asutralian dollar', cad: 'Canadian dollar', dkk: 'Danish Crown', nok: "Norwegian Krone",
@@ -48,7 +48,7 @@ function currencyOnDay(){
     
     var selectedDate = $("#datepicker")[0].value;
     var formatedDate = formatDate(selectedDate); //console.log(formatedDate);
-    var url = "http://api.kursna-lista.info/3a829dd47e1cc21fb1dfe3406989a59a/kl_na_dan/"+formatedDate+"/json";
+    var url = "https://api.kursna-lista.info/3a829dd47e1cc21fb1dfe3406989a59a/kl_na_dan/"+formatedDate+"/json";
     
     $.ajax({
         dataType: "jsonp",
@@ -127,7 +127,7 @@ function calculate(){
         
         if(from != 'Pick currency' && to != 'Pick currency' && amount >= 0 && date != ''){         
 //http://api.kursna-lista.info/3a829dd47e1cc21fb1dfe3406989a59a/konvertor/eur/rsd/iznos/12.01.2017/sre/json 
-            var url = 'http://api.kursna-lista.info/3a829dd47e1cc21fb1dfe3406989a59a/konvertor/'+from+'/'+to+
+            var url = 'https://api.kursna-lista.info/3a829dd47e1cc21fb1dfe3406989a59a/konvertor/'+from+'/'+to+
                 '/'+amount+'/'+date+'/sre/json';
             
             $.ajax({
